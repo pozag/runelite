@@ -19,6 +19,14 @@ public interface BirdNestViewerConfig extends Config {
     )
     default Color getBirdNestColor() { return Color.GREEN; }
 
+    @ConfigItem(
+            keyName = "droppableSeedColor",
+            name = "Droppable Seed Color",
+            description = "Color of droppable seeds",
+            position = 2
+    )
+    default Color getDroppableSeedColor() { return Color.RED; }
+
     enum TreeSeeds {
         ACORN,
         WILLOW,
@@ -42,7 +50,7 @@ public interface BirdNestViewerConfig extends Config {
             keyName = "lowestTreeSeed",
             name = "Lowest Tree Seed",
             description = "Mark tree seeds below this level for dropping",
-            position = 2
+            position = 3
     )
     default TreeSeeds getLowestTreeSeed() {
 
@@ -53,7 +61,7 @@ public interface BirdNestViewerConfig extends Config {
             keyName = "lowestFruitTreeSeed",
             name = "Lowest Fruit Tree Seed",
             description = "Mark fruit tree seeds below this level for dropping",
-            position = 3
+            position = 4
     )
     default  FruitTreeSeeds getLowestFruitTreeSeed() { return  FruitTreeSeeds.APPLE; }
 }
